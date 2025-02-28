@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateClock() {
         let clockElement = document.getElementById("dashboard-clock");
         if (clockElement) {
-            clockElement.textContent = new Date().toLocaleTimeString();
+            let timezone = dashboardClockSettings.timezone || "UTC";
+            let now = new Date().toLocaleTimeString("en-US", { timeZone: timezone });
+            clockElement.textContent = now;
         } else {
             console.error("Dashboard Clock element not found.");
         }
