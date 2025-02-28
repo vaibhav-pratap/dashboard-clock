@@ -21,6 +21,13 @@
  define('DASHBOARD_CLOCK_VERSION', '1.1.0');
  define('DASHBOARD_CLOCK_DIR', plugin_dir_path(__FILE__));
  define('DASHBOARD_CLOCK_URL', plugin_dir_url(__FILE__));
+ define('DASHBOARD_CLOCK_GITHUB_REPO', 'vaibhav-pratap/dashboard-clock'); // GitHub Repository
+
+ // Load update checker
+require_once DASHBOARD_CLOCK_DIR . 'includes/update-checker.php';
+
+// Load plugin settings
+require_once DASHBOARD_CLOCK_DIR . 'includes/settings-page.php';
  
  /**
   * Plugin Activation Hook
