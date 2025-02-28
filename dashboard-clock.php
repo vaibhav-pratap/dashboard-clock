@@ -29,10 +29,11 @@ function dashboard_clock_activate() {
         wp_die(__('This plugin requires PHP 8.0.30 or higher.', 'dashboard-clock'));
     }
 
-    if (!function_exists('wp_add_dashboard_widget')) {
+    if (version_compare(get_bloginfo('version'), '6.4', '<')) {
         deactivate_plugins(plugin_basename(__FILE__));
-        wp_die(__('WordPress version is too old. Update to 6.4 or higher.', 'dashboard-clock'));
+        wp_die(__('This plugin requires WordPress 6.4 or higher.', 'dashboard-clock'));
     }
+    
 
     // Set default options if needed
     update_option('dashboard_clock_active', true);
