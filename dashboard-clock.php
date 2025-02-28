@@ -3,7 +3,7 @@
  * Plugin Name: Dashboard Clock
  * Plugin URI: https://github.com/vaibhav-pratap/dashboard-clock
  * Description: A simple plugin to display a clock on the WordPress dashboard with auto-update from GitHub.
- * Version: 1.1.0
+ * Version: 1.1.2
  * Requires PHP: 8.0.30
  * Requires at least: 6.4
  * Author: Vaibhav Singh
